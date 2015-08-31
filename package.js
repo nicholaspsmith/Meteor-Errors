@@ -1,6 +1,6 @@
 Package.describe({
   name: 'npsjsdev:errors',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Growl like notifications for errors. Created by following Discover Meteor tutorial.',
   git: 'https://github.com/nicholaspsmith/Meteor-Errors',
   documentation: 'README.md'
