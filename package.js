@@ -6,13 +6,13 @@ Package.describe({
   documentation: 'README.md'
 });
 
-Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.3');
-  api.addFiles('errors.js');
-});
+Package.onUse(function (api, where) {
+  api.versionsFrom('0.9.0');
 
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('npsjsdev:errors');
-  api.addFiles('errors-tests.js');
+  api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
+
+  api.addFiles(['errors.js', 'errors_list.html', 'errors_list.js'], 'client');
+
+  if (api.export)
+    api.export('Errors');
 });
